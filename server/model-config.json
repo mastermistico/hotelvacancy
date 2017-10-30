@@ -38,5 +38,13 @@
   "city": {
     "dataSource": "db",
     "public": true
+  },
+  "hotel": {
+    "dataSource": "db",
+    "public": true
+  },
+  "room": {
+    "dataSource": "db",
+    "public": false
   }
 }

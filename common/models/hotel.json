@@ -1,5 +1,5 @@
 {
-  "name": "city",
+  "name": "hotel",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -9,13 +9,18 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "room_quantity": {
+      "type": "number",
+      "required": true,
+      "default": 1
     }
   },
   "validations": [],
   "relations": {
-    "hotels": {
-      "type": "hasMany",
-      "model": "hotel",
+    "cities": {
+      "type": "belongsTo",
+      "model": "city",
       "foreignKey": ""
     }
   },

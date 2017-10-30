@@ -1,24 +1,27 @@
 {
-  "name": "city",
+  "name": "room",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "type": {
       "type": "string",
       "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true
+    },
+    "isFree": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   },
   "validations": [],
-  "relations": {
-    "hotels": {
-      "type": "hasMany",
-      "model": "hotel",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [
     {
       "accessType": "*",
