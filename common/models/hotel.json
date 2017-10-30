@@ -18,6 +18,15 @@
   },
   "validations": [],
   "relations": {
+    "rooms": {
+      "type": "embedsMany",
+      "model": "room",
+      "property": "hotelRoom",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    },
     "cities": {
       "type": "belongsTo",
       "model": "city",
