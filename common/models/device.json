@@ -1,0 +1,27 @@
+{
+  "name": "device",
+  "base": "Role",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "permission": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "default": [
+        "n"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

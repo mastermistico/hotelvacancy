@@ -46,5 +46,13 @@
   "room": {
     "dataSource": "db",
     "public": false
+  },
+  "log": {
+    "dataSource": "db",
+    "public": false
+  },
+  "device": {
+    "dataSource": "db",
+    "public": true
   }
 }

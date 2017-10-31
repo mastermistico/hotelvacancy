@@ -1,9 +1,28 @@
 'use strict';
 
 var loopback = require('loopback');
+
 var boot = require('loopback-boot');
 
+
 var app = module.exports = loopback();
+
+ 
+//save log from method HTTP
+app.middleware('initial', function logResponse(req, res, next) {
+  // install a listener for when the response is finished
+  var log = require('debug')('http')
+  , http = require('http')
+
+  res.on('finish', function() {
+    // the request was handled, print the log entry
+    log('userid: ' + req.accessToken.userId + 'req.method' + ' ' + req.url)
+  });
+
+  // resume the routing pipeline,
+  // let other middleware to actually handle the request
+  next();
+});
 
 app.start = function() {
   // start the web server
